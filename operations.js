@@ -9,6 +9,8 @@ const divide = (x, y) => +x / +y;
 
 const power = (x, y) => Math.pow(+x, +y);
 
+const modulus = (x, y) => +x % +y;
+
 const validateNumbers = (x, y) => {
     if (isNaN(x) || isNaN(y)) {
         return false
@@ -16,4 +18,4 @@ const validateNumbers = (x, y) => {
     return true
 };
 
-module.exports = { add, subtract, multiply, divide, power, validateNumbers }
+module.exports = { add, subtract, multiply, divide, power, modulus, validateNumbers }

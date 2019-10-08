@@ -28,16 +28,20 @@ it('correctly calculates the quotient of 10 and 2', () => {
 
 it('correctly calculates 2 to the power of 3', () => {
     assert.equal(operations.power(2, 3), 8);
-})
+});
+
+it('correctly calculates the modulus of 10 and 3', () => {
+    assert.equal(operations.modulus(10, 3), 1);
+});
 
 it('indicates failure when a string is used instead of a number', () => {
     assert.equal(operations.validateNumbers('sammy', 5), false)
-})
+});
 
 it('indicates failure when two strings is used instead of numbers', () => {
     assert.equal(operations.validateNumbers('sammy', 'sammy'), false)
-})
+});
 
 it('successfully runs when two numbers are used', () => {
     assert.equal(operations.validateNumbers(5, 5), true)
-})
+});

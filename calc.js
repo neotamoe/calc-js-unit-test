@@ -29,6 +29,7 @@ const doTheMath = (rl) => {
             [3] Multiplication (*)
             [4] Division (/)
             [5] Exponents (^)
+            [6] Remainder (&)
             
             Enter your choice: `,
                 choice => {
@@ -51,12 +52,15 @@ const doTheMath = (rl) => {
                             case '5': 
                                 console.log(`The value of ${x} to the power of ${y} is ${operations.power(x,y)}`);
                                 break;
+                            case '6': 
+                                console.log(`The value of ${x} remainder ${y} is ${operations.modulus(x,y)}`);
+                                break;
                             default: 
                                 console.log('Invalid number.  Please restart the program and select a valid number.');
                                 break;
                         }
                     }
-                    rl.question(`\nDo you want to do another calculation?  \nPress Y for yes and N for no. `, YorN => {
+                    rl.question(`\nDo you want to do another calculation?  \nPress 'Y' or 'N': `, YorN => {
                         if(YorN=='Y' || YorN=='y'){
                             doTheMath(rl);
                         } else if (YorN=='N' || YorN=='n'){
